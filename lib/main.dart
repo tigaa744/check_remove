@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter/services.dart';
 import 'package:check_remove/check.dart';
-void main() => runApp(MyApp());
+void main() {
+
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -31,38 +34,42 @@ class HomePage extends StatelessWidget {
           )
         ],
       ),
-      body: Padding(
-        padding: EdgeInsets.all(16.0),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment:CrossAxisAlignment.center,
-          children: <Widget>[
-            ElevatedButton(
-              onPressed: () => removeMDMEnrollmentInformation(context),
-              child: Text('Remove MDM Enrollment Information'),
-            ),
-            SizedBox(height: 16.0),
-//             Center(
-//               child: Container(
-//                 width: 250,
-//                 child: TextField(
+      body: Container(
+        alignment: AlignmentDirectional.center,
 
-//                   controller: _profileIdentifierController,
-//                   decoration: InputDecoration(
-//                     labelText: 'Profile Identifier',
-//                   ),
-//                 ),
-//               ),
-//             ),
-            SizedBox(height: 16.0),
-            ElevatedButton(
-              onPressed: () => removeMDMConfigurationProfile(
-                  context, _profileIdentifierController.text),
-              child: Text('Remove MDM Configuration Profile'),
-            ),
-            SizedBox(height: 16.0),
-            Text('Results will appear here'),
-          ],
+
+        child: Padding(
+          padding: EdgeInsets.all(16.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              ElevatedButton(
+                onPressed: () => removeMDMEnrollmentInformation(context),
+                child: Text('Remove MDM Enrollment Information'),
+              ),
+              SizedBox(height: 16.0),
+             //  Center(
+             //    child: Container(
+             //      width: 250,
+             //      child: TextField(
+             //
+             //        controller: _profileIdentifierController,
+             //        decoration: InputDecoration(
+             //          labelText: 'Profile Identifier',
+             //        ),
+             //      ),
+             //   ),
+             // ),
+              SizedBox(height: 16.0),
+              ElevatedButton(
+                onPressed: () => removeMDMConfigurationProfile(
+                    context, _profileIdentifierController.text),
+                child: Text('Remove MDM Configuration Profile'),
+              ),
+              SizedBox(height: 16.0),
+              Text('Results will appear here'),
+            ],
+          ),
         ),
       ),
     );
