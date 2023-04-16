@@ -42,18 +42,18 @@ class HomePage extends StatelessWidget {
               child: Text('Remove MDM Enrollment Information'),
             ),
             SizedBox(height: 16.0),
-            Center(
-              child: Container(
-                width: 250,
-                child: TextField(
+//             Center(
+//               child: Container(
+//                 width: 250,
+//                 child: TextField(
 
-                  controller: _profileIdentifierController,
-                  decoration: InputDecoration(
-                    labelText: 'Profile Identifier',
-                  ),
-                ),
-              ),
-            ),
+//                   controller: _profileIdentifierController,
+//                   decoration: InputDecoration(
+//                     labelText: 'Profile Identifier',
+//                   ),
+//                 ),
+//               ),
+//             ),
             SizedBox(height: 16.0),
             ElevatedButton(
               onPressed: () => removeMDMConfigurationProfile(
